@@ -33,5 +33,15 @@ func main() {
 }
 ```
 
-### [项目环境配置（.env）](./docs/env.md)
-### [日志文件（logger）](./docs/log.md)
+### 开发准备
+
+#### [项目环境配置（.env）](./docs/env.md)
+#### [日志文件（logger）](./docs/log.md)
+#### [设置路由（router）]('./docs/router.md')
+#### [数据库使用（database）]('/docs/database.md')
+
+#### restful api 示例
+
+[具体示例看这里](./docs/restful.md)
+
+#### 部署
