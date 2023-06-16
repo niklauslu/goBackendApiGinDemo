@@ -37,8 +37,8 @@ func main() {
 
 #### [项目环境配置（.env）](./docs/env.md)
 #### [日志文件（logger）](./docs/log.md)
-#### [设置路由（router）]('./docs/router.md')
-#### [数据库使用（database）]('./docs/database.md')
+#### [设置路由（router）](./docs/router.md)
+#### [数据库使用（database)](./docs/database.md)
 
 #### restful api 示例
 
