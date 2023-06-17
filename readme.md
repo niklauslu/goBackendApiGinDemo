@@ -3,17 +3,17 @@
 [gin](https://github.com/gin-gonic/gin):一个非常好用的go web框架
 
 安装gin
-```
+```sh
 go get -u github.com/gin-gonic/gin
 ```
 ps:设置go env
-```
+```sh
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 gin demo示例
-```
+```go
 package main
 
 import (
@@ -45,3 +45,8 @@ func main() {
 [具体示例看这里](./docs/restful.md)
 
 #### 部署
+
+部署基于[docker](https://www.docker.com/)，docker安装教程可见[官方文档](https://docs.docker.com/get-docker/)
+
+1. [打包docker镜像](./docs/build.md)
+2. [服务器部署](./docs/deploy.md)
