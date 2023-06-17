@@ -1,5 +1,9 @@
 ### 服务器部署
 
+复制配置文件，并进行修改
+```bash
+cp .env.example .env
+```
 #### 方式一:直接使用docker部署
 
 安装好docker以后，
