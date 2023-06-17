@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	apis_upload "niklauslu/goBackendApiGinDemo/apis/upload"
 	apis_user "niklauslu/goBackendApiGinDemo/apis/user"
 	"time"
 
@@ -21,6 +22,8 @@ func getApiRouter(router *gin.Engine) {
 		api.GET("/timestamp", func(ctx *gin.Context) {
 			ctx.String(http.StatusOK, fmt.Sprintf("%d", time.Now().Unix()))
 		})
+
+		api.POST("/upload/local", apis_upload.SingleLocalUpload)
 
 		api.GET("/users", apis_user.UsersGet)
 		api.GET("/users/:id", apis_user.UserGet)

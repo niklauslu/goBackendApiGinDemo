@@ -17,6 +17,7 @@ import (
 )
 
 var logger = lib.Logger("app")
+var uploadPath = ""
 
 func main() {
 
@@ -30,7 +31,13 @@ func main() {
 	setDatabase()
 
 	router := gin.Default()
+
+	// 设置上传
+	if err := setUploader(router); err != nil {
+		logger.Fatalf("upload set err:%s", err.Error())
+	}
 	// 全局中间件
+	router.Use(globalConfMid())
 	// Logger 中间件将日志写入 gin.DefaultWriter，即使你将 GIN_MODE 设置为 release。
 	// By default gin.DefaultWriter = os.Stdout
 	router.Use(gin.Logger())
@@ -96,4 +103,33 @@ func setDatabase() {
 	}
 	logger.Info("db sync success")
 
+}
+
+func setUploader(router *gin.Engine) error {
+
+	if dir, err := os.Getwd(); err == nil {
+		uploadPath = dir + "/public/uploads/"
+	}
+
+	if err := os.MkdirAll(uploadPath, 0777); err != nil {
+		return err
+	}
+
+	// 为 multipart forms 设置较低的内存限制 (默认是 32 MiB)
+	router.MaxMultipartMemory = 8 << 20 // 8 MiB
+	router.Static("/uploads/", uploadPath)
+
+	return nil
+}
+
+// 全局配置中间件
+func globalConfMid() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+		c.Set("upload_path", uploadPath)
+		c.Set("upload_host", os.Getenv("UPLOAD_HOST"))
+
+		//请求之前
+		c.Next()
+	}
 }

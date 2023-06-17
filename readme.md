@@ -1,6 +1,10 @@
  # golang接口服务demo（gin框架版本）
 
-[gin](https://github.com/gin-gonic/gin):一个非常好用的go web框架
+项目使用：  
++ [gin](https://github.com/gin-gonic/gin):一个非常好用的go web框架  
++ [xorm](https://xorm.io/):golang的ORM，操作数据库很好用
++ [docker](https://www.docker.com/):打包部署
++ [ACME](https://github.com/acmesh-official/acme.sh):获取https证书用
 
 安装gin
 ```sh
@@ -33,16 +37,18 @@ func main() {
 }
 ```
 
-### 开发准备
+### 开发
 
 #### [项目环境配置（.env）](./docs/env.md)
 #### [日志文件（logger）](./docs/log.md)
+#### [全局配置中间件]()
 #### [设置路由（router）](./docs/router.md)
 #### [数据库使用（database)](./docs/database.md)
-
+#### [文件上传（upload）]()
 #### restful api 示例
 
 [具体示例看这里](./docs/restful.md)
+
 
 ### 部署
 
@@ -50,3 +56,4 @@ func main() {
 
 1. [打包docker镜像](./docs/build.md)
 2. [服务器部署](./docs/deploy.md)
+3. [nginx&域名相关](./docs/domain.md)
