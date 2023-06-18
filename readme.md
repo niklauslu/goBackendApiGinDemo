@@ -41,7 +41,7 @@ func main() {
 
 #### [项目环境配置（.env）](./docs/env.md)
 #### [日志文件（logger）](./docs/log.md)
-#### [全局配置中间件]()
+#### [全局配置中间件](./docs/globalConf.md)
 #### [设置路由（router）](./docs/router.md)
 #### [数据库使用（database)](./docs/database.md)
 #### [文件上传（upload）]()
