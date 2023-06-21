@@ -49,7 +49,7 @@ func main() {
 
 #### [Mysql](./docs/mysql.md)
 #### [MongoDB](./docs/mongodb.md)
-### restful api 示例
+### RESTful api 示例
 [具体示例看这里](./docs/restful.md)
 
 
