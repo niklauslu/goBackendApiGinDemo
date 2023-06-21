@@ -45,9 +45,16 @@ func main() {
 #### [设置路由（router）](./docs/router.md)
 #### [数据库使用（database)](./docs/database.md)
 #### [文件上传（upload）]()
-#### restful api 示例
+
+### 数据库使用
+
+#### [mysql](./docs/mysql.md)
+#### [MongoDB](./docs/mongodb.md)
+### restful api 示例
 
 [具体示例看这里](./docs/restful.md)
+
+
 
 
 ### 部署

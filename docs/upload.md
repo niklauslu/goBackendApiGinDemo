@@ -39,6 +39,7 @@ func setUploader(router *gin.Engine) error {
 c.Set("upload_path", uploadPath)
 c.Set("upload_host", os.Getenv("UPLOAD_HOST"))
 ```
+
 接口示例
 ```go
 package apis_upload

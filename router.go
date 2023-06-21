@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	apis_article "niklauslu/goBackendApiGinDemo/apis/article"
 	apis_upload "niklauslu/goBackendApiGinDemo/apis/upload"
 	apis_user "niklauslu/goBackendApiGinDemo/apis/user"
 	"time"
@@ -30,6 +31,9 @@ func getApiRouter(router *gin.Engine) {
 		api.POST("/users", apis_user.UserCreate)
 		api.PUT("/users", apis_user.UserUpdate)
 		api.DELETE("/users/:id", apis_user.UserDelete)
+
+		api.POST("/articles", apis_article.ArticleAdd)
+		api.GET("/articles", apis_article.ArticleGet)
 	}
 }
 
